@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(252, 237, 251);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.converter-box {
+    border: 2px solid #164368;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: rgb(134, 56, 130);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 400px;
+}
+
+h1 {
+    color: #fdf8f8;
+    text-decoration: underline;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f5f3f3;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 0;
+    width: 200px;
+}
+
+select {
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    margin: 0 auto; /* Add this line to center the button horizontally */
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #3f113f;
+    color: #dee7fa;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#resultArea {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fdf8f8;
+}
+
+.converter-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.thermometer {
+    width: 30px;
+    height: 100%;
+    background-color: white;
+    border: 2px solid #3498db;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 15px;
+    transition: height 0.5s, background-color 0.5s; /* Smooth transition effect */
+}
+
+.temperature-scale {
+    position: absolute;
+    top: 0;
+    right: 10px; /* Adjust the right distance as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.scale-quarter {
+    height: 25%; /* Each quarter takes 25% of the scale height */
+    background-color: transparent; /* Adjust as needed */
+    border: 1px solid #000; /* Add a border for better visibility */
+    margin-bottom: 5px; /* Add margin to create space between quarters */
+}
+
+.temperature-scale-label {
+    text-align: center;
+    color: #030303; /* Adjust the color as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+h2 {
+    margin-top: -70px; /* Adjust the margin-top value as needed */
+    text-align: center; /* Center the text */
+    color: #030303; /* Adjust the color as needed */
+}
+
+/* For screens up to 600 pixels wide */
+@media only screen and (max-width: 600px) {
+    .converter-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .converter-box {
+        max-width: 300px; /* Adjust the max-width as needed */
+        margin: 10px; /* Adjust the margin as needed */
+    }
+
+    .thermometer {
+        width: 20px; /* Adjust the width for visibility on smaller screens */
+        height: 150px; /* Adjust the height for visibility on smaller screens */
+        margin-top: 30px; /* Adjust the margin as needed */
+    }
+
+    /* Separate From Unit and To Unit labels on small screens */
+    label {
+        display: block;
+        margin-top: 10px; /* Adjust the margin as needed */
+    }
+
+    h2 {
+        margin-top: -35px; /* Adjust the margin-top value as needed */
+        text-align: center; /* Center the text */
+        color: #030303; /* Adjust the color as needed */
+    }
+}
+
+/* For screens between 601 and 1024 pixels wide */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .converter-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .converter-box {
+        max-width: 300px; /* Adjust the max-width as needed */
+        margin-bottom: 50px;
+    }
+
+    .thermometer {
+        margin-top: 50px; /* Adjust the margin as needed */
+    }
+}
